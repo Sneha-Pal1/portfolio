@@ -3,7 +3,7 @@ import { projects } from "@/data/projects";
 import { blogPosts } from "@/data/blogs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://snehapal.dev";
+  const baseUrl = "https://snehapal.tech";
 
   const staticUrls = [
     { url: baseUrl, lastModified: new Date() },

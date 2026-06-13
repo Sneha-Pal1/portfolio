@@ -126,7 +126,7 @@ export default function Contact() {
 
           <div className="flex flex-wrap justify-center items-center gap-3 mb-14">
             <a
-              href="mailto:sneha.pal@example.com"
+              href="mailto:xsnehapal@gmail.com"
               className="inline-flex items-center gap-2 bg-accent-color text-text-primary text-[11px] font-black tracking-[0.12em] px-7 py-4 rounded-[4px] hover:brightness-95 transition-all uppercase"
             >
               <Mail className="w-3.5 h-3.5" /> Say Hello

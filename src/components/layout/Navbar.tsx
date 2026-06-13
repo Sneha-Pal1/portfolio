@@ -12,7 +12,7 @@ const links = [
   { label: "SKILLS", href: "/#skills" },
   { label: "EXPERIENCE", href: "/#experience" },
   { label: "BLOG", href: "/blog" },
-  // { label: "RESUME", href: "/resume" },
+  { label: "RESUME", href: "/resume" },
 ];
 
 export default function Navbar() {
@@ -73,17 +73,19 @@ export default function Navbar() {
             >
               CONTACT
             </Link>
-            {/* <Link href="/resume"
-              className="inline-flex items-center gap-1.5 bg-accent-color text-text-primary text-[11px] font-black tracking-[0.12em] px-4 py-2.5 rounded-[4px] hover:brightness-95 transition-all">
+            <Link
+              href="/resume"
+              className="inline-flex items-center gap-1.5 bg-accent-color text-text-primary text-[11px] font-black tracking-[0.12em] px-4 py-2.5 rounded-[4px] hover:brightness-95 transition-all"
+            >
               RÉSUMÉ <ArrowUpRight className="w-3 h-3" />
-            </Link> */}
-            <a
+            </Link>
+            {/* <a
               href="/Sneha_Pal_Resume.pdf"
               download
               className="inline-flex items-center gap-1.5 bg-accent-color text-text-primary text-[11px] font-black tracking-[0.12em] px-4 py-2.5 rounded-[4px] hover:brightness-95 transition-all"
             >
               RÉSUMÉ <ArrowUpRight className="w-3 h-3" />
-            </a>
+            </a> */}
           </div>
 
           {/* Hamburger & mobile toggle indicators */}

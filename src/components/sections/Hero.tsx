@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { ArrowUpRight, ArrowDown, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -99,12 +99,19 @@ export default function Hero() {
               >
                 View Projects <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
-              <Link
-                href="/resume"
+              {/* <Link
+                href="/Sneha_Pal_Resume.pdf"
                 className="inline-flex items-center gap-2 bg-bg-secondary border border-border-color text-text-primary text-[11px] font-black tracking-[0.12em] px-7 py-4 rounded-[4px] hover:brightness-97 transition-all uppercase"
               >
                 Download Resume
-              </Link>
+              </Link> */}
+              <a
+                href="/Sneha_Pal_Resume.pdf"
+                download
+                className="inline-flex items-center gap-2 bg-bg-secondary border border-border-color text-text-primary text-[11px] font-black tracking-[0.12em] px-7 py-4 rounded-[4px] hover:brightness-97 transition-all uppercase"
+              >
+                <Download className="w-3.5 h-3.5" /> DOWNLOAD PDF
+              </a>
             </div>
           </motion.div>
 

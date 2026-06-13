@@ -13,104 +13,103 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "nestjs-architecture-placements",
-    title: "Why NestJS is My Go-To Framework for Full Stack Placements",
-    excerpt: "An in-depth look at how NestJS's structured architecture helps you write cleaner APIs and impress technical interviewers.",
-    date: "June 2, 2026",
+    title: "Getting Started with NestJS",
+    excerpt:
+      "A beginner-friendly overview of NestJS, exploring its modular architecture, dependency injection, and why it has become my preferred framework for building scalable backend applications.",
+    date: "July 2, 2025",
     category: "NestJS",
     tags: ["NestJS", "Backend", "Web Development"],
     readTime: "6 min read",
     featured: true,
     content: `
-NestJS has quickly become the gold standard for backend development in TypeScript. For a computer science student preparing for placements, building projects with NestJS is one of the best ways to demonstrate an understanding of enterprise-level design patterns.
+# Getting Started with NestJS
 
-## The Problem with Express.js
-While Express is incredibly popular, it is highly unopinionated. In large scale projects, this leads to a lack of structure. Files are organized differently by every developer, making codebase maintenance difficult. 
+As I started building larger backend applications, I realized that managing routes, services, authentication, and databases in plain Express.js could become difficult as projects grew. That's when I discovered NestJS.
 
-In a technical interview, when you show a project with flat Express routers, the interviewer might wonder if you understand software engineering patterns.
+NestJS is a progressive Node.js framework built with TypeScript. It provides a structured architecture inspired by Angular and helps developers build scalable and maintainable server-side applications.
 
-## The NestJS Solution
-NestJS brings structure. It heavily borrows architectural patterns from Angular, utilizing decorators, modules, controllers, and services. It encourages Dependency Injection (DI) and modular development out of the box.
+One of the features I appreciate most is its modular architecture. Instead of placing all logic in a single file, NestJS encourages separating features into modules, controllers, and services. This makes projects easier to understand and maintain.
 
-Here's why NestJS makes your portfolio stand out:
-1. **Dependency Injection**: It handles object lifetimes and dependencies automatically. You can explain how you decouple database layers from business logic easily.
-2. **TypeScript by Default**: Strong types mean fewer runtime exceptions. It shows you care about code safety.
-3. **Built-in Pipes & Guards**: It provides structured validation (via class-validator) and authorization protocols.
+While learning NestJS, I explored concepts such as dependency injection, middleware, guards, interceptors, and custom decorators. I also integrated PostgreSQL using TypeORM and implemented JWT-based authentication systems.
 
-By structuring projects like *Ignita* and *Bloom* using NestJS modules, I was able to easily write clean unit tests and design modular backend services.
-    `
+NestJS has significantly improved the way I approach backend development. It allows me to focus on writing clean business logic while providing a solid foundation for scalable applications. Today, it is one of my preferred technologies for building APIs and backend services.
+
+    `,
   },
   {
-    slug: "demystifying-dsa-interviews",
-    title: "Demystifying System Design & DSA Patterns in 2026",
-    excerpt: "Key patterns and strategies for mastering data structures and system design questions in upcoming software engineering recruitment cycles.",
+    slug: "Git and GitHub",
+    title: "How Git and GitHub Improved My Workflow",
+    excerpt:
+      "Key patterns and strategies for mastering data structures and system design questions in upcoming software engineering recruitment cycles.",
     date: "May 28, 2026",
     category: "DSA",
-    tags: ["DSA", "System Design", "Career"],
+    tags: ["Git", "GitHub", "Open SOurce", "Version Control", "Productivity"],
     readTime: "8 min read",
     featured: false,
     content: `
-Data Structures and Algorithms (DSA) remain the primary filter for software engineering interviews. However, memorizing solutions is a losing strategy. Instead, focusing on underlying patterns is key to solving unseen problems.
+When I first started programming, I managed projects by creating multiple folders with names like "final", "final-v2", and "final-final". As projects became larger, this approach quickly became difficult to manage.
 
-## Top Patterns to Master
-1. **Sliding Window**: Used for tracking subarray matches (e.g. longest substring without repeating characters).
-2. **Two Pointers**: Efficient space optimization (e.g. sorting in-place, finding pairs).
-3. **Fast and Slow Pointers**: Detect cycle loops (e.g. Floyd's cycle detection).
-4. **Monotonic Stack**: Next greater element queries.
+Learning Git changed everything.
 
-## Connecting DSA to System Design
-During placement interviews, top companies love to ask questions that bridge algorithms and architecture. For example, how do you design a rate limiter?
-- **Algorithm**: Token Bucket or Sliding Window Log.
-- **Data Structure**: Redis sorted set for tracking active requests.
-- **System Component**: API Gateway middleware intercepts incoming calls.
+Git allows developers to track changes, experiment safely, and maintain a complete history of their projects. Instead of worrying about breaking existing code, I can create branches, test new features, and merge them when they are ready.
 
-Understanding these connections shows recruiters you can translate conceptual algorithms into scalable production solutions.
-    `
+GitHub takes collaboration even further by providing a platform to host repositories, review code, and manage projects. It has become my central hub for showcasing projects, tracking progress, and maintaining my portfolio.
+
+Using Git and GitHub has taught me important software development practices such as commit management, version control, branching strategies, and pull requests. These skills are essential in professional development environments.
+
+Today, every project I build starts with Git initialization. It helps me stay organized, track my progress, and maintain confidence while developing new features.
+    `,
   },
   {
-    slug: "building-ignita-agentic-ai",
-    title: "Building Ignita: Challenges in Creating Multi-Agent AI Environments",
-    excerpt: "A technical dive into building an autonomous workspace agent. How we solved infinite loops and index lookups.",
+    slug: "building-ignita",
+    title: "What I Learned from Building Full-Stack Project – Ignita",
+    excerpt:
+      "A technical dive into building an autonomous workspace agent. How we solved infinite loops and index lookups.",
     date: "May 15, 2026",
     category: "Projects",
-    tags: ["Projects", "Backend", "AI / ML"],
+    tags: ["Projects", "Backend", "Project Journey", "NestJS", "System Design"],
     readTime: "10 min read",
     featured: false,
     content: `
-Building *Ignita* was an eye-opener in asynchronous backend engineering and LLM planning constraints. Here is the technical breakdown of the challenges we solved.
+Building Ignita was one of the most valuable learning experiences in my software development journey. The project was designed to help students discover hackathons, internships, coding contests, and other career opportunities in one place.
 
-## 1. The Loops Problem
-When executing autonomous correction code loops, LLMs often attempt similar fixes repeatedly when faced with compiler tracebacks. 
+When I started, I thought the biggest challenge would be writing code. However, I quickly realized that planning the application architecture was equally important. I spent time designing database schemas, API structures, authentication flows, and feature modules before implementing them.
 
-We resolved this by injecting a state memory ledger. Before proposing a code edit, the Orchestrator checks if a similar diff has already failed. If so, it raises a penalty weight to force the model to try an alternate approach.
+Through Ignita, I learned how frontend and backend systems communicate. I worked with Next.js for the frontend and NestJS with PostgreSQL for the backend. Managing authentication, bookmarks, notifications, alerts, and event data taught me how real-world applications are structured.
 
-## 2. AST Context Parsing
-LLMs perform poorly when given huge code files. To preserve token budgets, we implemented a custom Python parser that extracts the Abstract Syntax Tree (AST) of the workspace. It creates clean outline files detailing class signatures and import bindings. 
+One of the biggest lessons was understanding the importance of clean code and modular design. Features become easier to maintain when responsibilities are clearly separated across components and services.
 
-This enables the agent to search for imports and only load the specific files it needs to modify, reducing prompt tokens by 75%.
-    `
+The project also improved my debugging skills. Every error became an opportunity to learn something new about APIs, databases, deployment, or system design.
+
+Ignita continues to evolve, but the experience of building it taught me much more than any tutorial ever could. It showed me how software engineering is not only about coding but also about problem-solving, planning, and continuous improvement.
+    `,
   },
   {
-    slug: "internship-preparation-tips",
-    title: "How I Secured Internships at DIT and NIC: A Prep Guide",
-    excerpt: "Steps, resumes templates, and coding practice routines that helped me secure backend and full-stack placements.",
+    slug: "why-problem-solving-matters-in-software-development",
+    title: "Why Problem Solving Matters in Software Development",
+    excerpt:
+      "Steps, resumes templates, and coding practice routines that helped me secure backend and full-stack placements.",
     date: "April 20, 2026",
     category: "Career",
-    tags: ["Career", "Interview Prep", "Placements"],
-    readTime: "5 min read",
+    tags: [
+      "Problem Solving",
+      "DSA",
+      "why-problem-solving-matters-in-software-development",
+      "Programming",
+    ],
+    readTime: "7 min read",
     featured: false,
     content: `
-Securing internships at the National Informatics Centre (NIC) and the Directorate of Information Technology (DIT) required a balanced preparation strategy combining solid backend projects and core computer science fundamentals.
+Many beginners believe software development is primarily about learning programming languages. While languages are important, the real skill behind successful development is problem solving.
 
-## Resume Strategy
-1. **Lead with Projects**: Recruiters spend 6 seconds reviewing your resume. Make sure your top project includes a bold list of technologies and key metrics (e.g. "reduced DB query times by 40%").
-2. **Emphasize Impact**: Don't just list what you did. Highlight the business/operational result.
-3. **Format**: Keep a clean, single-column design.
+Every application is essentially a collection of problems that need solutions. Whether it is optimizing a database query, designing an authentication system, or fixing a bug, developers spend most of their time solving problems rather than simply writing code.
 
-## Core CS Prep
-Aside from LeetCode, spend time review:
-- **DBMS**: Database normalization (1NF, 2NF, 3NF), index structures (B-Trees), and ACID properties.
-- **Computer Networks**: TCP handshakes, HTTP/HTTPS architectures, and DNS routing.
-- **Operating Systems**: Thread scheduling, semaphore blocks, and page allocation policies.
-    `
-  }
+Practicing Data Structures and Algorithms has helped me strengthen my analytical thinking. It has taught me how to break complex challenges into smaller, manageable parts and evaluate different approaches before implementing a solution.
+
+Problem-solving skills also improve debugging. Instead of randomly changing code, developers learn to identify root causes and systematically test solutions.
+
+As I continue my journey in software development, I have realized that technologies change frequently, but strong problem-solving abilities remain valuable throughout a career. Learning frameworks is important, but learning how to think like an engineer is what truly makes a difference.
+
+    `,
+  },
 ];
