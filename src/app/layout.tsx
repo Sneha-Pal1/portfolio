@@ -10,10 +10,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Sneha Pal — Full Stack Developer & CS Student",
-  description: "Portfolio of Sneha Pal — Software engineer student specializing in full-stack architecture, machine learning, and developer environments. Explore selected work, case studies, and career blogs.",
+  description:
+    "Portfolio of Sneha Pal — Software engineer student specializing in full-stack architecture, machine learning, and developer environments. Explore selected work, case studies, and career blogs.",
   openGraph: {
     title: "Sneha Pal — Full Stack Developer & CS Student",
-    description: "Software engineer portfolio specializing in NestJS, Next.js, FastAPI, and ML systems.",
+    description:
+      "Software engineer portfolio specializing in NestJS, Next.js, FastAPI, and ML systems.",
     type: "website",
     locale: "en_US",
     siteName: "Sneha Pal Portfolio",
@@ -21,8 +23,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sneha Pal — Full Stack Developer & CS Student",
-    description: "Software engineer portfolio specializing in NestJS, Next.js, FastAPI, and ML systems.",
-  }
+    description:
+      "Software engineer portfolio specializing in NestJS, Next.js, FastAPI, and ML systems.",
+  },
 };
 
 export default function RootLayout({
@@ -31,28 +34,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`} style={{ colorScheme: "light dark" }} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const saved = localStorage.getItem('theme');
-                  const isDark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
-                  if (isDark) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {
-                  console.error('Theme detection failed', e);
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
+    <html
+      lang="en"
+      className={`${inter.variable} antialiased`}
+      style={{ colorScheme: "light dark" }}
+      suppressHydrationWarning
+    >
+      <head />
       <body className="font-sans bg-bg-primary text-text-primary min-h-screen">
         {children}
         <CommandPalette />
