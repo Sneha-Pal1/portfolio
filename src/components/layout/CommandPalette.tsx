@@ -43,7 +43,10 @@ export default function CommandPalette() {
   // Handle click outside to close
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
         setOpen(false);
       }
     };
@@ -60,24 +63,113 @@ export default function CommandPalette() {
   };
 
   const items: CommandItem[] = [
-    { title: "Home Page", category: "Navigation", action: () => { router.push("/"); setOpen(false); } },
-    { title: "Work Section", category: "Navigation", action: () => { router.push("/#work"); setOpen(false); } },
-    { title: "About Section", category: "Navigation", action: () => { router.push("/#about"); setOpen(false); } },
-    { title: "Skills Section", category: "Navigation", action: () => { router.push("/#skills"); setOpen(false); } },
-    { title: "Experience Section", category: "Navigation", action: () => { router.push("/#experience"); setOpen(false); } },
-    { title: "Blog Hub", category: "Navigation", action: () => { router.push("/blog"); setOpen(false); } },
-    { title: "My Resume", category: "Navigation", action: () => { router.push("/resume"); setOpen(false); } },
-    { title: "Ignita Project Case Study", category: "Projects", action: () => { router.push("/projects/ignita"); setOpen(false); } },
-    { title: "Bloom Project Case Study", category: "Projects", action: () => { router.push("/projects/bloom"); setOpen(false); } },
-    { title: "MyPrep Project Case Study", category: "Projects", action: () => { router.push("/projects/myprep"); setOpen(false); } },
-    { title: "Grubbly Project Case Study", category: "Projects", action: () => { router.push("/projects/grubbly"); setOpen(false); } },
-    { title: "ShelfSoul Project Case Study", category: "Projects", action: () => { router.push("/projects/shelfsoul"); setOpen(false); } },
-    { title: "Toggle Color Theme", category: "Preferences", action: toggleTheme },
+    {
+      title: "Home Page",
+      category: "Navigation",
+      action: () => {
+        router.push("/");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Work Section",
+      category: "Navigation",
+      action: () => {
+        router.push("/#work");
+        setOpen(false);
+      },
+    },
+    {
+      title: "About Section",
+      category: "Navigation",
+      action: () => {
+        router.push("/#about");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Skills Section",
+      category: "Navigation",
+      action: () => {
+        router.push("/#skills");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Experience Section",
+      category: "Navigation",
+      action: () => {
+        router.push("/#experience");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Blog Hub",
+      category: "Navigation",
+      action: () => {
+        router.push("/blog");
+        setOpen(false);
+      },
+    },
+    {
+      title: "My Resume",
+      category: "Navigation",
+      action: () => {
+        router.push("/resume");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Ignita Project Case Study",
+      category: "Projects",
+      action: () => {
+        router.push("/projects/ignita");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Bloom Project Case Study",
+      category: "Projects",
+      action: () => {
+        router.push("/projects/bloom");
+        setOpen(false);
+      },
+    },
+    {
+      title: "MyPrep Project Case Study",
+      category: "Projects",
+      action: () => {
+        router.push("/projects/myprep");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Grubbly Project Case Study",
+      category: "Projects",
+      action: () => {
+        router.push("/projects/grubbly");
+        setOpen(false);
+      },
+    },
+    {
+      title: "ShelfSoul Project Case Study",
+      category: "Projects",
+      action: () => {
+        router.push("/projects/shelfsoul");
+        setOpen(false);
+      },
+    },
+    {
+      title: "Toggle Color Theme",
+      category: "Preferences",
+      action: toggleTheme,
+    },
   ];
 
-  const filtered = items.filter((item) =>
-    item.title.toLowerCase().includes(query.toLowerCase()) ||
-    item.category.toLowerCase().includes(query.toLowerCase())
+  const filtered = items.filter(
+    (item) =>
+      item.title.toLowerCase().includes(query.toLowerCase()) ||
+      item.category.toLowerCase().includes(query.toLowerCase()),
   );
 
   useEffect(() => {
@@ -90,7 +182,9 @@ export default function CommandPalette() {
       setSelectedIndex((prev) => (prev + 1) % Math.max(1, filtered.length));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
-      setSelectedIndex((prev) => (prev - 1 + filtered.length) % Math.max(1, filtered.length));
+      setSelectedIndex(
+        (prev) => (prev - 1 + filtered.length) % Math.max(1, filtered.length),
+      );
     } else if (e.key === "Enter") {
       e.preventDefault();
       if (filtered[selectedIndex]) {
@@ -107,7 +201,11 @@ export default function CommandPalette() {
           onClick={() => setOpen(true)}
           className="bg-bg-primary/80 backdrop-blur border border-border-color text-text-primary px-3 py-2 rounded-lg text-[10px] font-black tracking-widest shadow-sm hover:bg-bg-secondary cursor-pointer"
         >
-          PRESS <kbd className="bg-bg-secondary px-1.5 py-0.5 rounded border border-border-color">Ctrl + K</kbd> TO NAVIGATE
+          PRESS{" "}
+          <kbd className="bg-bg-secondary px-1.5 py-0.5 rounded border border-border-color">
+            Ctrl + K
+          </kbd>{" "}
+          TO NAVIGATE
         </button>
       </div>
 
@@ -124,7 +222,15 @@ export default function CommandPalette() {
             >
               {/* Search bar */}
               <div className="flex items-center gap-3 px-4 border-b border-border-color py-3">
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" className="text-text-secondary flex-shrink-0">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  fill="none"
+                  className="text-text-secondary flex-shrink-0"
+                >
                   <circle cx="11" cy="11" r="8" />
                   <path d="m21 21-4.3-4.3" />
                 </svg>
@@ -148,14 +254,22 @@ export default function CommandPalette() {
                       onClick={item.action}
                       onMouseEnter={() => setSelectedIndex(idx)}
                       className={`w-full text-left px-5 py-2.5 flex items-center justify-between transition-colors ${
-                        idx === selectedIndex ? "bg-bg-secondary" : "bg-transparent"
+                        idx === selectedIndex
+                          ? "bg-bg-secondary"
+                          : "bg-transparent"
                       }`}
                     >
                       <div className="flex flex-col">
-                        <span className="text-[12px] font-bold text-text-primary">{item.title}</span>
-                        <span className="text-[9px] font-semibold text-text-secondary tracking-wider uppercase mt-0.5">{item.category}</span>
+                        <span className="text-[12px] font-bold text-text-primary">
+                          {item.title}
+                        </span>
+                        <span className="text-[9px] font-semibold text-text-secondary tracking-wider uppercase mt-0.5">
+                          {item.category}
+                        </span>
                       </div>
-                      <span className="text-[10px] text-text-secondary font-black tracking-widest opacity-40">SELECT ↵</span>
+                      <span className="text-[10px] text-text-secondary font-black tracking-widest opacity-40">
+                        SELECT ↵
+                      </span>
                     </button>
                   ))
                 ) : (

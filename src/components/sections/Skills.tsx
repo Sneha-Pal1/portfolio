@@ -5,25 +5,37 @@ import { motion } from "framer-motion";
 const categories = [
   {
     label: "LANGUAGES",
-    items: ["Python", "TypeScript", "JavaScript", "C++", "SQL", "Dart"],
+    items: ["Java", "TypeScript", "JavaScript", , "SQL", "Python"],
   },
   {
     label: "BACKEND CORE",
-    items: ["NestJS", "Node.js", "Express", "FastAPI", "REST APIs", "GraphQL"],
+    items: ["NestJS", "Node.js", "Express", "REST APIs", ""],
   },
   {
     label: "FRONTEND & MOBILE",
-    items: ["Next.js", "React", "Tailwind CSS", "Flutter", "Framer Motion", "HTML/CSS"],
+    items: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "HTML/CSS"],
   },
   {
     label: "TOOLS & DATABASES",
-    items: ["PostgreSQL", "MongoDB", "SQLite", "Git", "Docker", "Firebase"],
+    items: [
+      "PostgreSQL",
+      "MongoDB",
+      "MySql",
+      "Supabase",
+      "Git",
+      "Github",
+      "Docker",
+      "Postman",
+    ],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="w-full border-t border-border-color bg-bg-primary py-24 px-8 md:px-10">
+    <section
+      id="skills"
+      className="w-full border-t border-border-color bg-bg-primary py-24 px-8 md:px-10"
+    >
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,14 +45,18 @@ export default function Skills() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
         >
           <div>
-            <span className="text-[10px] font-black tracking-[0.2em] text-accent-color block mb-4 uppercase">SKILLS &amp; STACK</span>
+            <span className="text-[10px] font-black tracking-[0.2em] text-accent-color block mb-4 uppercase">
+              SKILLS &amp; STACK
+            </span>
             <h2 className="text-[40px] md:text-[52px] font-black tracking-[-0.04em] leading-[1.05] text-text-primary">
-              Core Tech &amp;<br />
+              Core Tech &amp;
+              <br />
               <span className="text-outline">Competencies</span>
             </h2>
           </div>
           <p className="text-[14px] leading-[1.7] text-text-secondary max-w-[340px] md:pb-1 font-medium">
-            Solid foundation in languages, backend frameworks, relational databases, and dynamic web architectures.
+            Solid foundation in languages, backend frameworks, relational
+            databases, and dynamic web architectures.
           </p>
         </motion.div>
 
