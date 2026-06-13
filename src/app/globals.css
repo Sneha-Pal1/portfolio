@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-color: var(--border-color);
+  --color-accent-color: var(--accent-color);
+  --color-accent-hover: var(--accent-hover);
+  --color-card-bg: var(--card-bg);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #FFFEF2;
+  --bg-secondary: #f0efe4;
+  --text-primary: #191918;
+  --text-secondary: rgba(25, 25, 24, 0.65);
+  --border-color: rgba(25, 25, 24, 0.08);
+  --accent-color: #E8A23A;
+  --accent-hover: #d28e2d;
+  --card-bg: #ffffff;
+  
+  --sky-start: #e8e3d0;
+  --sky-end: #c8bfa8;
+  --mountain-1: 185,172,148;
+  --mountain-2: 160,148,126;
+  --mountain-3: 135,124,104;
+  --mountain-4: 110,100,82;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg-primary: #0C0C0B;
+  --bg-secondary: #191918;
+  --text-primary: #FFFEF2;
+  --text-secondary: rgba(255, 254, 242, 0.65);
+  --border-color: rgba(255, 254, 242, 0.08);
+  --accent-color: #E8A23A;
+  --accent-hover: #fcaa2d;
+  --card-bg: #131312;
+  
+  --sky-start: #1D1C1A;
+  --sky-end: #141312;
+  --mountain-1: 65,60,52;
+  --mountain-2: 55,50,43;
+  --mountain-3: 45,41,35;
+  --mountain-4: 35,31,27;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@custom-variant dark (&:where(.dark, .dark *));
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5px var(--text-primary);
+  color: transparent;
+}
+
+.text-outline-thin {
+  -webkit-text-stroke: 1px var(--text-primary);
+  color: transparent;
 }
