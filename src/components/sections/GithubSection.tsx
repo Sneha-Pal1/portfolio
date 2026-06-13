@@ -2,7 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Activity } from "lucide-react";
-import { GitHubCalendar } from "react-github-calendar";
+import dynamic from "next/dynamic";
+
+const GitHubCalendar = dynamic(
+  () => import("react-github-calendar").then((mod) => mod.GitHubCalendar),
+  { ssr: false },
+);
 
 export default function GithubSection() {
   return (
