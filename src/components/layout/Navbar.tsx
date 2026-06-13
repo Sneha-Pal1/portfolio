@@ -12,7 +12,7 @@ const links = [
   { label: "SKILLS", href: "/#skills" },
   { label: "EXPERIENCE", href: "/#experience" },
   { label: "BLOG", href: "/blog" },
-  { label: "RESUME", href: "/resume" },
+  // { label: "RESUME", href: "/resume" },
 ];
 
 export default function Navbar() {
@@ -40,14 +40,19 @@ export default function Navbar() {
             <div className="w-7 h-7 bg-text-primary rounded-[4px] flex items-center justify-center">
               <span className="text-bg-primary font-black text-xs">S</span>
             </div>
-            <span className="font-black text-[15px] tracking-tight text-text-primary">Sneha Pal</span>
+            <span className="font-black text-[15px] tracking-tight text-text-primary">
+              Sneha Pal
+            </span>
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {links.map((l) => (
-              <Link key={l.label} href={l.href}
-                className="text-[11px] font-semibold tracking-[0.12em] text-text-primary hover:opacity-50 transition-opacity">
+              <Link
+                key={l.label}
+                href={l.href}
+                className="text-[11px] font-semibold tracking-[0.12em] text-text-primary hover:opacity-50 transition-opacity"
+              >
                 {l.label}
               </Link>
             ))}
@@ -55,24 +60,40 @@ export default function Navbar() {
 
           {/* CTA & Theme toggle */}
           <div className="hidden lg:flex items-center gap-5">
-            <span className="text-[9px] font-black tracking-widest text-text-secondary border border-border-color px-2 py-1.5 rounded bg-bg-secondary/40 select-none cursor-default" title="Press Ctrl+K to open search">
+            <span
+              className="text-[9px] font-black tracking-widest text-text-secondary border border-border-color px-2 py-1.5 rounded bg-bg-secondary/40 select-none cursor-default"
+              title="Press Ctrl+K to open search"
+            >
               CMD + K
             </span>
             <ThemeToggle />
-            <Link href="mailto:sneha.pal@example.com"
-              className="text-[11px] font-semibold tracking-[0.12em] text-text-primary hover:opacity-50 transition-opacity">
+            <Link
+              href="mailto:xsnehapal@gmail.com"
+              className="text-[11px] font-semibold tracking-[0.12em] text-text-primary hover:opacity-50 transition-opacity"
+            >
               CONTACT
             </Link>
-            <Link href="/resume"
+            {/* <Link href="/resume"
               className="inline-flex items-center gap-1.5 bg-accent-color text-text-primary text-[11px] font-black tracking-[0.12em] px-4 py-2.5 rounded-[4px] hover:brightness-95 transition-all">
               RÉSUMÉ <ArrowUpRight className="w-3 h-3" />
-            </Link>
+            </Link> */}
+            <a
+              href="/Sneha_Pal_Resume.pdf"
+              download
+              className="inline-flex items-center gap-1.5 bg-accent-color text-text-primary text-[11px] font-black tracking-[0.12em] px-4 py-2.5 rounded-[4px] hover:brightness-95 transition-all"
+            >
+              RÉSUMÉ <ArrowUpRight className="w-3 h-3" />
+            </a>
           </div>
 
           {/* Hamburger & mobile toggle indicators */}
           <div className="flex items-center gap-3 lg:hidden">
             <ThemeToggle />
-            <button onClick={() => setOpen(!open)} aria-label="Menu" className="text-text-primary">
+            <button
+              onClick={() => setOpen(!open)}
+              aria-label="Menu"
+              className="text-text-primary"
+            >
               {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
@@ -86,16 +107,23 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-bg-primary flex flex-col items-center justify-center gap-8">
+            className="fixed inset-0 z-40 bg-bg-primary flex flex-col items-center justify-center gap-8"
+          >
             {links.map((l) => (
-              <Link key={l.label} href={l.href} onClick={() => setOpen(false)}
-                className="text-2xl font-black tracking-widest text-text-primary hover:opacity-50 transition-opacity">
+              <Link
+                key={l.label}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="text-2xl font-black tracking-widest text-text-primary hover:opacity-50 transition-opacity"
+              >
                 {l.label}
               </Link>
             ))}
-            <Link href="mailto:sneha.pal@example.com"
+            <Link
+              href="mailto:xsnehapal@gmail.com"
               className="mt-4 bg-accent-color text-text-primary font-black tracking-widest px-10 py-4 rounded-[4px] text-sm"
-              onClick={() => setOpen(false)}>
+              onClick={() => setOpen(false)}
+            >
               CONTACT
             </Link>
           </motion.div>

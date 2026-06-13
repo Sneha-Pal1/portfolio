@@ -135,9 +135,9 @@ export const projects: Project[] = [
     slug: "bloom",
     num: "02",
     title: "Bloom",
-    tag: "FINTECH WEB APP",
+    tag: "Women’s Health & Wellness Platform",
     year: "2025",
-    desc: "A clean, data-driven personal wealth advisor and investment tracker designed for millennials.",
+    desc: "Bloom is a self-care and mental wellness web app that helps users track their mood, follow gentle workout routines, and build personalized self-care habits. It offers a calming interface to reset, reflect, and rise—designed to promote emotional well-being and growth.",
     tech: [
       "Next.js",
       "NestJS",
@@ -147,68 +147,79 @@ export const projects: Project[] = [
       "Tailwind CSS",
     ],
     overview:
-      "Bloom is a financial management platform providing aggregate views of portfolios, savings, and investments. It automates goal tracking and offers personalized rebalancing tips based on portfolio volatility.",
+      "Bloom is a comprehensive wellness companion designed specifically for women's health and well-being. From menstrual cycle tracking to personalized yoga routines, community support, and AI-powered insights, Bloom empowers women to understand their bodies, optimize their wellness, and connect with a supportive community.",
     problem:
-      "Millennials struggle with split financial records across micro-investing apps, standard banks, and credit accounts, leading to a fragmented understanding of net worth and long-term targets.",
+      "Millions of women struggle to access reliable and personalized guidance for menstrual health, PCOS, mental wellness, and self-care. Existing solutions are fragmented, often providing generic or conflicting information. Social stigma and limited access to experts further prevent women from seeking timely support.",
     solution:
-      "Bloom consolidates all accounts securely, providing visual performance charts, projection curves, and intelligent recommendations to help users optimize asset allocation.",
+      "Bloom is a women-first wellness platform that brings together self-care routines, wellness tracking, expert consultations, digital resources, and curated wellness products into one trusted ecosystem.",
     features: [
-      "Aggregated Wealth Tracker: Real-time sync with major accounts.",
-      "Personalized Asset Allocator: Goal-based portfolio suggestions.",
-      "Interactive Projections: Live adjustment curves for interest, savings rates, and inflation.",
-      "Secure Encrypted Vaults: Bank-grade database hashing and JWT-based auth.",
+      "Personalized Wellness Routines: Custom self-care, fitness, and mindfulness plans based on individual needs.",
+      "Mood & Wellness Tracking: Track mood, habits, energy levels, and overall wellness progress.",
+      "Women's Health Resources: Trusted information on PCOS, menstrual health, nutrition, mental well-being, and lifestyle management.",
+      "Digital Wellness Store: Journals, planners, self-care guides, e-books, and printable wellness resources.",
+      "Wellness Essentials Marketplace: Curated products including menstrual care, yoga accessories, herbal wellness products, and self-care essentials.",
+      "Safe Community Support: A stigma-free space where women can learn, share experiences, and support each other.",
     ],
-    github: "https://github.com/snehapal/bloom",
-    live: "https://bloom.snehapal.dev",
+    github: "https://github.com/Sneha-Pal1/Bloom",
+    live: "https://bloom-ed4n.vercel.app/",
     backendHeavy: true,
     architecture: {
-      title: "Bloom Aggregator Backend Flow",
+      title: "Bloom Wellness Platform Backend Flow",
       description:
-        "Flow of financial institution syncs, secure API gateway, data processing queue, and dashboard visualizer.",
+        "Flow of user wellness tracking, authentication, personalized routines, expert consultations, and digital store management.",
       nodes: [
         {
           id: "1",
-          label: "Plaid / Banking API",
-          desc: "Pulls investment and balances data dynamically.",
+          label: "Bloom Web App",
+          desc: "Users access wellness routines, mood tracking, and health resources.",
         },
         {
           id: "2",
-          label: "Worker Queue",
-          desc: "Processes ledger records and calculates allocations asynchronously.",
+          label: "Auth & User Service",
+          desc: "Handles authentication, profiles, wellness preferences, and secure access.",
         },
         {
           id: "3",
-          label: "NestJS core API",
-          desc: "Calculates interest yields and asset volatility values.",
+          label: "Bloom API Server",
+          desc: "Processes wellness data, routines, digital products, and consultation requests.",
         },
         {
           id: "4",
-          label: "Next.js Dashboard",
-          desc: "Renders interactive SVG charts and goal cards.",
+          label: "MongoDB Database",
+          desc: "Stores users, wellness routines, mood logs, consultations, and digital products.",
+        },
+        {
+          id: "5",
+          label: "Expert Consultation Module",
+          desc: "Manages appointments with gynecologists, therapists, and nutritionists.",
         },
       ],
       edges: [
-        { from: "1", to: "2", label: "Webhook updates" },
-        { from: "2", to: "3", label: "Store ledger records" },
-        { from: "3", to: "4", label: "Serve unified data" },
+        { from: "1", to: "2", label: "User Login & Registration" },
+        { from: "2", to: "3", label: "Authenticated Requests" },
+        { from: "3", to: "4", label: "Store Wellness Data" },
+        { from: "3", to: "5", label: "Consultation Requests" },
+        { from: "4", to: "1", label: "Personalized Dashboard" },
       ],
     },
+
     screenshots: [
       {
-        title: "Aggregated Portfolio View",
+        title: "Personalized Wellness Dashboard",
         caption:
-          "Displays asset allocation percentages with dynamic interactive charts.",
-        color: "#E8A23A",
+          "Track mood, habits, routines, and wellness progress through an intuitive dashboard.",
+        color: "#D89AC8",
       },
       {
-        title: "Retirement Calculator",
+        title: "Digital Wellness Store",
         caption:
-          "Interactive sliders showing wealth growth based on compounding intervals.",
-        color: "#1C1C1A",
+          "Browse journals, planners, self-care guides, and wellness essentials designed for women.",
+        color: "#B794F4",
       },
     ],
+
     challenges: [
-      "Managing rate-limiting and connection dropouts from banking APIs was a primary obstacle. We designed an event-driven worker queue with exponential backoff retries to ensure accounts updated smoothly in the background without locking user requests.",
+      "Designing a secure and scalable platform for handling sensitive women's health information while maintaining privacy, personalized experiences, and future expert consultation integration was a key challenge. The architecture was built with modular services and secure authentication to support long-term growth.",
     ],
   },
   {
