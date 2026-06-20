@@ -45,7 +45,7 @@ export default function ResumePage() {
               <Printer className="w-3.5 h-3.5" /> PRINT CV
             </button>
             <a
-              href="/Sneha_Pal_Resume.pdf"
+              href="/resume.pdf"
               download
               className="inline-flex items-center gap-2 bg-accent-color text-text-primary text-[10px] font-black tracking-widest px-4 py-2.5 rounded-[4px] hover:brightness-95 transition-all"
             >

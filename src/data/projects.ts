@@ -32,7 +32,7 @@ export const projects: Project[] = [
     slug: "ignita",
     num: "01",
     title: "Ignita",
-    tag: "AI / ML PLATFORM",
+    tag: "event aggregator platform",
     year: "2026",
     desc: "IGNITA is a full-stack event aggregator platform designed for college students to discover and explore tech events like hackathons, internships, coding fests, and workshops. ",
     tech: [
@@ -65,7 +65,7 @@ export const projects: Project[] = [
       "Real-Time Opportunity Tracking - Stay updated with the latest opportunities and activity notifications.",
     ],
     github: "https://github.com/Sneha-Pal1/Ignita-fullstack",
-    live: "https://ignita.snehapal.dev",
+    live: "https://ignita.in/",
     backendHeavy: true,
     architecture: {
       title: "Ignita Multi-Agent AST Core Architecture",
@@ -227,7 +227,7 @@ export const projects: Project[] = [
     num: "03",
     title: "MyPrep",
     tag: "EDUCATION PLATFORM",
-    year: "2025",
+    year: "2026",
     desc: "A collaborative prep and testing ecosystem tailored for competitive Computer Science examinations.",
     tech: [
       "React",
@@ -250,7 +250,7 @@ export const projects: Project[] = [
       "AI Study Planner: Automatically flags weak areas and suggests targets.",
     ],
     github: "https://github.com/snehapal/myprep",
-    live: "https://myprep.snehapal.dev",
+    live: "https://my-prep-gilt.vercel.app/",
     backendHeavy: false,
     architecture: {
       title: "MyPrep Socket Lobbies Flow",

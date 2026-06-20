@@ -79,13 +79,6 @@ export default function Navbar() {
             >
               RÉSUMÉ <ArrowUpRight className="w-3 h-3" />
             </Link>
-            {/* <a
-              href="/Sneha_Pal_Resume.pdf"
-              download
-              className="inline-flex items-center gap-1.5 bg-accent-color text-text-primary text-[11px] font-black tracking-[0.12em] px-4 py-2.5 rounded-[4px] hover:brightness-95 transition-all"
-            >
-              RÉSUMÉ <ArrowUpRight className="w-3 h-3" />
-            </a> */}
           </div>
 
           {/* Hamburger & mobile toggle indicators */}
