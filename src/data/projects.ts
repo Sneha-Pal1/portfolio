@@ -131,6 +131,7 @@ export const projects: Project[] = [
       "Designing a scalable PostgreSQL database schema and managing relationships between users, events, bookmarks, and alerts.",
     ],
   },
+
   {
     slug: "bloom",
     num: "02",
@@ -161,7 +162,7 @@ export const projects: Project[] = [
       "Safe Community Support: A stigma-free space where women can learn, share experiences, and support each other.",
     ],
     github: "https://github.com/Sneha-Pal1/Bloom",
-    live: "https://bloom-ed4n.vercel.app/",
+    live: "comming soon",
     backendHeavy: true,
     architecture: {
       title: "Bloom Wellness Platform Backend Flow",
@@ -301,79 +302,84 @@ export const projects: Project[] = [
     slug: "grubbly",
     num: "04",
     title: "Grubbly",
-    tag: "LOGISTICS WEB APP",
-    year: "2024",
-    desc: "A hyper-local delivery dashboard optimization system connecting local kitchens with students.",
+    tag: "MERN FOOD DELIVERY APP",
+    year: "2026",
+    desc: "A full-stack MERN food delivery platform with multi-role access, real-time WebSocket order tracking, Leaflet maps, and online payment integration.",
     tech: [
-      "Next.js",
+      "React",
       "Node.js",
-      "PostgreSQL",
-      "Google Maps API",
-      "Tailwind CSS",
+      "Express",
+      "MongoDB",
+      "Socket.io",
+      "Leaflet Maps",
+      "Razorpay API",
     ],
     overview:
-      "Grubbly optimizes local delivery routes and connects micro-kitchens around campus. It incorporates smart batching to route multiple deliveries on a single trip, lowering fees for students and boosting kitchen profits.",
+      "Grubbly is a comprehensive food delivery application connecting customers, kitchen vendors, and platform administrators. It unifies order management, coordinate address pinning, live courier location animations, and secure transaction handling into a single, optimized Vite-React deployment.",
     problem:
-      "Ordering from multiple local home-cooks around campus incurs high delivery fees for students due to single-order dispatch cycles.",
+      "Managing separate admin and customer web hostings creates deployment complexity, while static delivery status pages provide poor visibility into order transit updates.",
     solution:
-      "Grubbly groups orders by geographical blocks and dispatch windows, enabling couriers to deliver up to 5 orders in a single, optimized circular loop.",
+      "Consolidated customer storefront and partner portals into a single Vite deployment with role-based JWT navigation guards, and implemented real-time Socket.io timeline updates with Leaflet map tracking animations.",
     features: [
-      "Geographical Batching Engine: Groups order dispatches by dorm blocks.",
-      "Live Courier Map: Shows real-time delivery tracking utilizing geolocation.",
-      "Merchant Portal: Allows local home-cooks to update daily menus instantly.",
-      "Instant Micro-payments: Fast, secure transaction handling.",
+      "Multi-Role Auth & Redirects: Automatically routes vendors to partner dashboards and customers to shop fronts.",
+      "Interactive Pinpoint Map: Pins exact delivery locations using OpenStreetMap and Nominatim reverse-geocoding.",
+      "Live WebSocket Timeline: Broadcaster timeline status updates and animates rider courier movements in real-time.",
+      "Secure payment gateway: Handles Razorpay checkout verified by backend HMAC-SHA256 signatures.",
     ],
-    github: "https://github.com/snehapal/grubbly",
-    live: "https://grubbly.snehapal.dev",
+    github: "https://github.com/Sneha-Pal1/Grubbly",
+    live: "https://grubbly.vercel.app",
     backendHeavy: true,
     architecture: {
-      title: "Grubbly Dynamic Routing Architecture",
+      title: "Grubbly WebSocket and Map Architecture",
       description:
-        "How order events flow through coordinate lookup, spatial clustering, and the driver routing gateway.",
+        "How events flow through customer checkout, backend Socket.io channels, and live courier map tracking loops.",
       nodes: [
         {
           id: "1",
-          label: "Customer App",
-          desc: "Places orders with geo-coordinates.",
+          label: "Customer Frontend",
+          desc: "Pins address on Leaflet Map and triggers Razorpay checkout.",
         },
         {
           id: "2",
-          label: "Spatial Database (PostGIS)",
-          desc: "Groups orders into geographical clusters.",
+          label: "Express Backend & Socket.io",
+          desc: "Verifies payment signatures, saves orders, and broadcasts status updates.",
         },
         {
           id: "3",
-          label: "Routing Engine (OSRM)",
-          desc: "Calculates optimized circular routes for couriers.",
+          label: "Vendor Dashboard",
+          desc: "Updates order states (Processing, Out for Delivery, Delivered).",
         },
         {
           id: "4",
-          label: "Driver Mobile Web App",
-          desc: "Receives step-by-step navigation cues.",
+          label: "Live Tracking Timeline",
+          desc: "Renders smooth rider movement along OpenStreetMap paths via WebSocket signals.",
         },
       ],
       edges: [
-        { from: "1", to: "2", label: "Send order" },
-        { from: "2", to: "3", label: "Calculate batches" },
-        { from: "3", to: "4", label: "Push navigation path" },
+        { from: "1", to: "2", label: "Place order and payment" },
+        { from: "3", to: "2", label: "Update order status" },
+        { from: "2", to: "4", label: "Emit live status_update" },
       ],
     },
     screenshots: [
       {
-        title: "Merchant Dashboard",
-        caption: "Tracks active orders, cook statuses, and revenue statistics.",
-        color: "#E8A23A",
+        title: "Vendor Dashboard",
+        caption:
+          "Tracks active orders, daily item listings, and revenue metrics.",
+        color: "#dc2f02",
       },
       {
-        title: "Driver Route Tracker",
-        caption: "Interactive map view displaying batch drop points.",
+        title: "Live Courier Tracking",
+        caption:
+          "Interactive map view displaying animated rider location updates.",
         color: "#1C1C1A",
       },
     ],
     challenges: [
-      "Handling sudden spikes in driver supply/demand at meal hours led to latency in route calculations. We implemented PostGIS spatial caching to pre-compute delivery zones, dropping map query times to under 50ms.",
+      "Consolidating independent customer and admin portals into a single React bundle required dynamic routing layout guards. We implemented useLocation layout filters to isolate CSS grid frameworks and navigation headers, achieving compile success in under 4 seconds.",
     ],
   },
+
   {
     slug: "shelfsoul",
     num: "05",
