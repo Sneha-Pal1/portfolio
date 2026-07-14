@@ -175,7 +175,7 @@ export default function Hero() {
                     AI/ML Intern @ IIIT Kalyani
                   </p>
                   <p className="text-[11px] text-text-secondary font-medium">
-                    Building: Ignita Autonomous Sandbox
+                    {/* Building: Ignita Autonomous Sandbox */}
                   </p>
                 </div>
 
