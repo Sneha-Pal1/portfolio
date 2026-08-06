@@ -100,11 +100,11 @@ export default function Hero() {
                 View Projects <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
               <a
-                href="/Sneha_Pal.pdf"
+                href="/Sneha_Pal_resume.pdf"
                 download
                 className="inline-flex items-center gap-2 bg-bg-secondary border border-border-color text-text-primary text-[11px] font-black tracking-[0.12em] px-7 py-4 rounded-[4px] hover:brightness-97 transition-all uppercase"
               >
-                <Download className="w-3.5 h-3.5" /> DOWNLOAD PDF
+                <Download className="w-3.5 h-3.5" /> DOWNLOAD RESUME
               </a>
             </div>
           </motion.div>
