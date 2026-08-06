@@ -407,8 +407,8 @@ export const projects: Project[] = [
       "Local Radius Search: Finds books available for swap within walking distance.",
       "Personalized Reviews Grid: Editorial layout showing reading logs.",
     ],
-    github: "https://github.com/snehapal/shelfsoul",
-    live: "https://shelfsoul.snehapal.dev",
+    github: "coming soon",
+    live: "coming soon",
     backendHeavy: false,
     architecture: {
       title: "ShelfSoul ISBN Sync Flow",
