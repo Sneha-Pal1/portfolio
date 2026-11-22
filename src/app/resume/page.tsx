@@ -128,7 +128,7 @@ export default function ResumePage() {
                         AI/ML Intern
                       </h4>
                       <span className="text-[11px] font-bold text-text-secondary uppercase">
-                        June 2026 — Present
+                        Jun 2026 — Aug 2026
                       </span>
                     </div>
                     <p className="text-[13px] font-semibold text-accent-color mt-0.5">
@@ -136,16 +136,14 @@ export default function ResumePage() {
                     </p>
                     <ul className="list-disc list-inside text-[12px] text-text-secondary mt-2 flex flex-col gap-1 pl-1 font-medium">
                       <li>
-                        Worked on Artificial Intelligence and Machine Learning
-                        projects as part of internship.
+                        Developed a Sanskrit NLP pipeline involving data
+                        collection, preprocessing, and dataset preparation for
+                        part-of-speech tagging from the Bhagavata Purana.
                       </li>
                       <li>
-                        Explored Machine Learning workflows, NLP-related tasks,
-                        and model experimentation.
-                      </li>
-                      <li>
-                        Conducted research, data preprocessing, model testing,
-                        and technical documentation.
+                        Fine-tuned and benchmarked multiple transformer models
+                        using LoRA, evaluating their performance for Sanskrit
+                        POS tagging with standard NLP evaluation metrics.
                       </li>
                     </ul>
                   </div>

@@ -169,13 +169,13 @@ export default function Hero() {
 
                 <div>
                   <span className="text-[9px] font-black text-text-secondary tracking-widest uppercase block mb-1">
-                    CURRENT STATUS
+                    OPEN TO WORK
                   </span>
                   <p className="text-[13px] font-bold text-text-primary">
-                    AI/ML Intern @ IIIT Kalyani
+                    Available for opportunities
                   </p>
                   <p className="text-[11px] text-text-secondary font-medium">
-                    {/* Building: Ignita Autonomous Sandbox */}
+                    Full-Stack / Backend roles
                   </p>
                 </div>
 
